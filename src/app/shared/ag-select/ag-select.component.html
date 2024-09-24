@@ -1,0 +1,12 @@
+<ng-select
+  #ngSelect
+  [(ngModel)]="selectedValue"
+  [style.width]="cellWidth"
+  (change)="onChange()"
+  [bindLabel]="params.bindLabel"
+  [bindValue]="params.bindValue"
+  [items]="params.items"
+  [loading]="params.loading"
+  [placeholder]="params.placeholder"
+  [disabled]="params.disabled"
+  [clearable]="false" />

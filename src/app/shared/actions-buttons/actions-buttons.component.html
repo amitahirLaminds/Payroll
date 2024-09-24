@@ -1,0 +1,60 @@
+<!-- Add New -->
+<div>
+    <a class="btn btn-secondary m-2" (click)="onAddNew()">
+        <i class="fa-solid fa-plus text-success" style="font-size: 1.5rem"></i> Add New
+    </a>
+
+    <!-- Edit -->
+    <a class="btn btn-secondary m-2" (click)="onEdit()">
+        <i class="fa-solid fa-pencil text-primary" style="font-size: 1.5rem"></i> Edit
+    </a>
+
+    <!-- Delete -->
+    <a class="btn btn-secondary m-2" (click)="onDelete()">
+        <i class="fa-solid fa-trash-can text-danger" style="font-size: 1.5rem"></i> Delete
+    </a>
+
+    <!-- UnAuthorize -->
+    @if(isAuthorized()) {
+    <a class="btn btn-secondary m-2" (click)="onUnAuthorize()">
+        <i class="fa-solid fa-unlock-keyhole text-warning" style="font-size: 1.5rem"></i> UnAuthorize
+    </a>
+    }
+    <!-- Authorize -->
+    @else {
+    <a class="btn btn-secondary m-2" (click)="onAuthorize()">
+        <i class="fa-solid fa-lock text-warning" style="font-size: 1.5rem"></i> Authorize
+    </a>
+    }
+
+    <!-- Deactivate -->
+    @if(isActivated()) {
+    <a class="btn btn-secondary m-2" (click)="onDeactivate()">
+        <i class="fa-solid fa-power-off text-danger" style="font-size: 1.5rem"></i> Deactivate
+    </a>
+    }
+    <!-- Activate -->
+    @else {
+    <a class="btn btn-secondary m-2" (click)="onActivate()">
+        <i class="fa-solid fa-power-off text-success" style="font-size: 1.5rem"></i> Activate
+    </a>
+    }
+
+    <!-- <div ngbDropdown class="d-inline-block m-2 bg-secondary">
+        <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+            <i style="font-size:2em" class="fa fa-solid fa-print" aria-hidden="true"></i>
+            Print Dashboard
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button ngbDropdownItem [printTitle]="preview?.printTitle" (click)="printsPreview()" [useExistingCss]="true"
+                [printSectionId]="preview?.id" ngxPrint>Print Preview</button>
+            <button ngbDropdownItem (click)="exportAsCSVs()">Export as CSV</button>
+            <button ngbDropdownItem (click)="exportAsExcels()">Export as Excel</button>
+            <button ngbDropdownItem (click)="exportAsPDFs()">Export as PDF</button>
+
+        </div>
+
+
+    </div> -->
+
+</div>
